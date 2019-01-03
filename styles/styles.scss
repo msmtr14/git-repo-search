@@ -18,7 +18,7 @@
     margin: 20px;
     text-align: center;
     input {
-      width: 50%;
+      width: 100%;
       padding: 5px 10px;
       border-radius: 10px;
       border: 1px solid #999999;
@@ -30,6 +30,19 @@
       }
     }
   }
+
+  .list-group-item-txt span{
+    color: green;
+  }
+
+.user_img_avatar{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 20%;
+  margin-bottom: 10%;
+}
+
   .repo-list {
     max-width: 900px;
     margin: 0 auto;
