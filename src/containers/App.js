@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { fetchRepos } from '@/src/actions'
+import { fetchRepos, fetchUsers } from '@/src/actions'
 import RepoListElement from '@/src/components/RepoListElement'
 import UserInfo from '@/src/components/UserInfo'
 
 class App extends Component {
   onInputChange = () => event => {
-    this.props.fetchRepos(event.target.value)
+    this.props.fetchRepos(event.target.value);
+    this.props.fetchUsers(event.target.value);
   }
 
   render () {
@@ -20,7 +21,7 @@ class App extends Component {
             type='text'
           />
           <br />
-          <div>
+          <div style={{marginTop:`20%`}}>
             <h4>List of available repositories:</h4>
             <p>(click on any repo to visit on GitHub)</p>
           </div>
@@ -35,7 +36,7 @@ class App extends Component {
         </div>
 
         </div>
-        <UserInfo repos={this.props.repos} />
+        <UserInfo users={this.props.users} />
       </div>
     )
   }
@@ -45,4 +46,4 @@ const mapStateToProps = ({ repos }) => ({
   repos
 })
 
-export default connect(mapStateToProps, { fetchRepos })(App)
+export default connect(mapStateToProps, { fetchRepos, fetchUsers })(App)
