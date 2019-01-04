@@ -55,11 +55,11 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "start": "webpack-dev-server --mode development --open",
+    "start": "rimraf dist && webpack-dev-server --mode development --open",
     "watch": "npm run start -- --watch",
     "lint": "standard",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "build": "webpack --mode productio"
+    "build": "rimraf dist && webpack-dev-server --mode development --open"
   }
 }
