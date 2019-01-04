@@ -10,6 +10,11 @@
     "env": [
       "jest"
     ],
+    
+    "engines": {
+      "node": "8.x"
+    },
+    
     "globals": [
       "fetch"
     ]

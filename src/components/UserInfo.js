@@ -2,7 +2,8 @@ import _ from 'lodash'
 import React from 'react'
 
 const UserInfo = ({ users }) => (
-(users[0] !== null || users[0] !== undefined) ? 
+users 
+  ? 
 <div key={users}> 
     <img src={users[3]} className="user_img_avatar" />
     <br />
@@ -13,7 +14,7 @@ const UserInfo = ({ users }) => (
     </p>
 </div>
 :
-null
+<p>---</p>
 )
 
 export default UserInfo;
